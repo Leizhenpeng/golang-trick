@@ -14,7 +14,11 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
 
 * **[可变参数`...`操作神奇切片](https://www.bilibili.com/video/BV1CA41167dM/)**
 
-    _三个...的用法._
+    _神奇...的用法._
+
+* **[interface的nil陷阱]()**
+
+    _golang的`interface{}`可没有ts的`any`省心._
 
 ---
 
