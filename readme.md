@@ -12,7 +12,9 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
   _虽然go没有`imple`关键字，但依旧不影响gopher发挥._
 
 
-* **[可变参数`...`来操作切片]()**
+* **[可变参数`...`操作神奇切片](https://www.bilibili.com/video/BV1CA41167dM/)**
+
+    _三个...的用法._
 
 ---
 
