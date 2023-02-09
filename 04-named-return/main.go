@@ -9,7 +9,7 @@ func main() {
 }
 
 func CopyIt(raw []string) []string {
-	r := make([]string, 0)
+	r := make([]string, len(raw))
 	for i, v := range raw {
 		r[i] = v
 	}
