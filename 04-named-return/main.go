@@ -8,11 +8,9 @@ func main() {
 	fmt.Println(b)
 }
 
-func CopyIt(raw []string) []string {
-	r := make([]string, len(raw))
-	for i, v := range raw {
-		r[i] = v
-	}
+func CopyIt(raw []string) (r []string) {
+	// r = append(r, raw...)
+	copy(r, raw)
 	return r
 }
 
