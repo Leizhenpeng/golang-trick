@@ -20,6 +20,11 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
 
     _golang的`interface{}`可没有ts的`any`省心._
 
+* **[给函数返回值起好名字]()**
+
+    _好的习惯会给无聊代码带来一阵清风._
+
+
 ---
 
 ## License
