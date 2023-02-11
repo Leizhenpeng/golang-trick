@@ -1,13 +1,13 @@
 package main
 
-type Book struct {
+type Book___ struct {
 	Title string
 	Code  string
 }
-type Option func(*Book)
+type Option func(*Book___)
 
-func NewBook_(options ...Option) *Book {
-	b := &Book{}
+func NewBook_(options ...Option) *Book___ {
+	b := &Book___{}
 	for _, option := range options {
 		option(b)
 	}
@@ -15,13 +15,13 @@ func NewBook_(options ...Option) *Book {
 }
 
 func WithTitle(title string) Option {
-	return func(b *Book) {
+	return func(b *Book___) {
 		b.Title = title
 	}
 }
 
 func WithISBN(ISBN string) Option {
-	return func(b *Book) {
+	return func(b *Book___) {
 		b.Code = ISBN
 	}
 }

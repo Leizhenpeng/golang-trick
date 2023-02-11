@@ -1,0 +1,35 @@
+//fake code
+
+package main
+
+type Map struct {
+	size    int
+	buckets []Bucket
+}
+type Bucket struct {
+	key   Key
+	value Value
+}
+
+func (m *Map) Set(key Key, value Value) {
+	// Compute the hash of the key.
+	hash := hashFunction(key)
+	// Determine the index of the bucket for this key.
+	index := hash % m.size
+	m.buckets[index] = Bucket{key: key, value: value}
+}
+
+func (m *Map) Get(key Key) (Value, bool) {
+	hash := hashFunction(key)
+	index := hash % m.size
+	// Retrieve the value for the key from the bucket.
+	if m.buckets[index].key == key {
+		return m.buckets[index].value, true
+	} else {
+		return Value{}, false
+	}
+}
+
+func hashFunction(key invalid type) {
+	panic("unimplemented")
+}
