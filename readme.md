@@ -19,6 +19,12 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
 
   _好的习惯会给无聊代码带来一阵清风._
 
+* **[range后面的表达式]()**
+
+ _不同于for，range后接的表达式只会被求值一次._
+
+
+
 ---
 
 ## License
