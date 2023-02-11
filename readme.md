@@ -19,10 +19,13 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
 
   _好的习惯会给无聊代码带来一阵清风._
 
-* **[你关注过range后面的表达式吗]()**
+* **[你关注过range后面的表达式吗](https://www.bilibili.com/video/BV15Y411i7oz/)**
 
  _不同于for，range后接的表达式只会被求值一次._
 
+ * **[永远不要在循环中更新map](https://www.bilibili.com/video/BV15Y411i7oz)**
+
+ _map是动态数据类型，你根本不知道自己的数据存储在个桶._
 
 
 ---
