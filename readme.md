@@ -21,15 +21,21 @@ Sharing is free but caring is priceless. [So, now please click here](https://www
 
 * **[你关注过range后面的表达式吗](https://www.bilibili.com/video/BV15Y411i7oz/)**
 
- _不同于for，range后接的表达式只会被求值一次._
+  _不同于for，range后接的表达式只会被求值一次._
 
  * **[永远不要在循环中更新map](https://www.bilibili.com/video/BV15Y411i7oz)**
 
- _map是动态数据类型，你根本不知道自己的数据存储在个桶._
+   _map是动态数据类型，你根本不知道自己的数据存储在个桶._
 
  * **[如何更新map中的struct](https://www.bilibili.com/video/BV1ER4y1B7WY/)**
 
- _map如果存储struct作为value，不能修改它的字段._
+    _map如果存储struct作为value，不能修改它的字段._
+
+ * **[Comparing values of different types in Go]()**
+
+    _._
+
+
 
 
 ---
