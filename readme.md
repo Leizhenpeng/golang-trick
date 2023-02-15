@@ -1,4 +1,4 @@
-# Golang Trickt
+# Golang Trick
 
 ## ❤️ Help other fellow developers
 
