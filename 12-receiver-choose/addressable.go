@@ -2,20 +2,17 @@ package main
 
 import "fmt"
 
-type animal interface {
-	speak() string
-}
-
-type dog struct{}
-
-func (d dog) speak() string {
-	return "Woof!"
-}
+type I interface{}
+type AInt int
+type AString string
 
 func main() {
-	d := dog{}
-	var a animal = d
-	fmt.Println(a) // this will output "&{}"
-	fmt.Println(&a)
-	// this will result in a compile-time error, as the concrete value stored in 'a' is not addressable
+	var a AInt = 5
+	var i I = a
+	fmt.Printf("i is of type %T\n", i)
+	var aPtr *AInt
+	// aPtr = &(i.(AInt))
+	var b AString = "hello"
+	i = b
+	fmt.Printf("i is of type %T, aPtr is of type %T\n", i, aPtr)
 }

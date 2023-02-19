@@ -6,7 +6,7 @@ func main() {
 	m := map[int]string{
 		1: "golang",
 		2: "rust",
-		3: "c/c++",
+		3: "ts",
 	}
 
 	for k := range m {

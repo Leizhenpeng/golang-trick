@@ -19,6 +19,8 @@ func main2() {
 	}
 	if a.TotalCount > a.OrderCount {
 		println("true")
+	} else {
+		println("false")
 	}
 	if a.MemberShip == 1 {
 		println("true")
@@ -26,6 +28,8 @@ func main2() {
 	if a.Price < 100 && a.MemberShip == 2 {
 		println("true")
 	}
+	// if ...else...
+	// if ...else if ...else if ...else if ...else...
 }
 
 // How To Kill Disgusting If Statement?

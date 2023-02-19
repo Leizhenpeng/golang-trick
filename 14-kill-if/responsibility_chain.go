@@ -28,6 +28,8 @@ func main() {
 		&OrderCountRule{},
 		&MemberShipRule{},
 		&DiscountRule{},
+		//...
+
 	}
 	r := Chain(sellInfo, rules...)
 	fmt.Println(r)
