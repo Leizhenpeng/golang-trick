@@ -5,25 +5,27 @@ import (
 	"fmt"
 )
 
-//  Tip1: ignore field 2 ways:
+//  Tip2: Omitting empty values
 
-type Meta struct {
-	Username string `json:"username" :"Username"`
-	// ignore by downCase
-	password string `json:"password" :"Password"`
-	// ignore by tag
-	Score string `json:"-" :"Score"`
+type Resp struct {
+	Code     int    `json:"code"`
+	Msg      string `json:"msg"`
+	ErrorInf string `json:"error"`
 }
 
-const jsonStr = `{
-	"username": "gopher",
-	"password": "123456",
-	"score": "100"
-}`
+type RespProxy struct {
+	Resp
+	ErrorInf string `json:"error,omitempty"`
+}
 
-func main() {
-	var meta Meta
-	json.Unmarshal([]byte(jsonStr), &meta)
-	fmt.Printf("%#v", meta)
-	//{Username: "gopher", password: "", Score: ""}
+func main2() {
+	r := new(RespProxy)
+	r.Code = 200
+	r.Msg = "ok"
+	r.ErrorInf = ""
+
+	r2, _ := json.Marshal(r)
+	fmt.Println(string(r2))
+	// {"code":200,"msg":"ok"}
+
 }

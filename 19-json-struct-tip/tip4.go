@@ -5,26 +5,19 @@ import (
 	"fmt"
 )
 
-//  Tip3: type convert
+//  Tip4: Store Raw Data Without Type
 
-type Base struct {
-	Code int    `json:"code"`
-	Msg  string `json:"msg"`
+type Raw struct {
+	Code int             `json:"code"`
+	Resp json.RawMessage `json:"resp"`
 }
 
-type BaseProxy struct {
-	Base
-	Code int `json:"code,string"`
-}
-
-func main3() {
-	r := new(BaseProxy)
-	r.Code = 200
-	r.Msg = "ok"
-
-	r2, _ := json.Marshal(r)
-	fmt.Println(string(r2))
-	// {"code":200,"msg":"ok","error":""}
-	// {"code":200,"msg":"ok"}
-
+func main() {
+	rawStr := `{
+		"code":200,
+		"resp":{"name":"river", "age":18}}`
+	var raw Raw
+	json.Unmarshal([]byte(rawStr), &raw)
+	fmt.Println(string(raw.Resp))
+	//{"name":"river", "age":18}
 }

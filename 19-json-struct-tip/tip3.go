@@ -5,28 +5,20 @@ import (
 	"fmt"
 )
 
-//  Tip2: Omitting empty values
+//  Tip3: type convert
 
-type Resp struct {
-	Code     int    `json:"code"`
-	Msg      string `json:"msg"`
-	ErrorInf string `json:"error"`
+type Base struct {
+	Code int    `json:"code,string"`
+	Msg  string `json:"msg"`
 }
 
-type RespProxy struct {
-	Resp
-	ErrorInf string `json:"error,omitempty"`
-}
-
-func main() {
-	r := new(RespProxy)
+func main3() {
+	r := new(Base)
 	r.Code = 200
 	r.Msg = "ok"
-	r.ErrorInf = ""
 
 	r2, _ := json.Marshal(r)
 	fmt.Println(string(r2))
-	// {"code":200,"msg":"ok","error":""}
-	// {"code":200,"msg":"ok"}
+	// {"code":"200","msg":"ok"}
 
 }

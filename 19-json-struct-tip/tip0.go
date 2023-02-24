@@ -5,23 +5,25 @@ import (
 	"fmt"
 )
 
-//  Tip1: ignore field 2 ways:
+// Tip0:
+// Outer Struct Override Inner Struct
 
-type Meta struct {
-	Username string `json:"username" :"Username"`
-	// ignore by downCase
-	password string `json:"Password" :"Password"`
-	// ignore by tag
-	Score string `json:"-" :"Score"`
+type Inner struct {
+	Name  string `json:"name" `
+	Price int    `json:"price"`
 }
 
-func main1() {
-	m := Meta{
-		Username: "river",
-		password: "22",
-		Score:    "100",
-	}
+type Outer struct {
+	Inner
+	Price string `json:"price"`
+}
+
+func main0() {
+	m := new(Outer)
+
+	m.Name = "river"
+	m.Price = "100"
+
 	r, _ := json.Marshal(m)
 	fmt.Println(string(r))
-	// {"username":"river"}
 }
