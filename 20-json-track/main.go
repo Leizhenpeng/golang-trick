@@ -6,33 +6,28 @@ import (
 	"time"
 )
 
-type Result struct {
+type Score struct {
 	Name string
 	time.Time
 }
 
-func (r Result) MarshalJSON() ([]byte, error) {
-	//{"Name":"river","Time":"2023-02-21T23:04:34.042027+08:00"}
-	return json.Marshal(struct {
-		Name string
-		Time string
-	}{
-		Name: r.Name,
-		Time: r.Time.Format(time.RFC3339),
-	})
-}
-
 func main() {
-	r := Result{
+	s := Score{
 		Name: "river",
 		Time: time.Now(),
 	}
-	b, err := json.Marshal(r)
+	r, err := json.Marshal(s)
 	if err != nil {
 		return
 	}
-	fmt.Printf("json: %s\n", string(b))
-	//json: "2023-02-21T23:04:34.042027+08:00" why??
-	//wahy not
+	fmt.Printf("json: %s\n", string(r))
+
+	/*
+		guess the output
+
+		Is { name: "river",
+			time: "2023-02-21T23:04:34.042027+08:00"}
+		??
+	*/
 
 }
