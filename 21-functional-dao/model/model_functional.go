@@ -8,17 +8,17 @@ import (
 
 type Option func(*gorm.DB) *gorm.DB
 
-func withCategory(category int) Option {
+func WithCategory(category int) Option {
 	return func(db *gorm.DB) *gorm.DB {
 		return db.Where("category = ?", category)
 	}
 }
-func withPrice(price int) Option {
+func WithPrice(price int) Option {
 	return func(db *gorm.DB) *gorm.DB {
 		return db.Where("price = ?", price)
 	}
 }
-func withPriceRange(min, max int) Option {
+func WithPriceRange(min, max int) Option {
 	return func(db *gorm.DB) *gorm.DB {
 		return db.Where("price >= ? AND price <= ?", min, max)
 	}
@@ -42,8 +42,8 @@ func GetBookByOptions(options ...Option) ([]Book, error) {
 // client code
 func ClientExample2() {
 	books, _ := GetBookByOptions(
-		withPrice(200),
-		withCategory(2),
+		WithPrice(200),
+		WithCategory(2),
 		TableName("books"),
 		//..
 	)
