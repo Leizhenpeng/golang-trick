@@ -12,6 +12,11 @@ type sms_tw struct {
 	timer  *timewheel.Task
 }
 
+/*
+tw, err := timewheel.NewTimeWheel(1*time.Second, 20)
+tw.Start()
+defer tw.Stop()
+*/
 func NewSMS_(text string, tw *timewheel.TimeWheel) *sms_tw {
 	s := &sms_tw{
 		text:   text,
@@ -23,7 +28,6 @@ func NewSMS_(text string, tw *timewheel.TimeWheel) *sms_tw {
 		}
 	})
 	s.timer = task
-
 	return s
 }
 

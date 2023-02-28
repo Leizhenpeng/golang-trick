@@ -32,7 +32,8 @@ func rawTest(count int, loop int) {
 }
 
 func twTest(count int, loop int) {
-	tw, err := timewheel.NewTimeWheel(1*time.Second, 20)
+	tw, err :=
+		timewheel.NewTimeWheel(1*time.Second, 20)
 	if err != nil {
 		panic(err)
 	}

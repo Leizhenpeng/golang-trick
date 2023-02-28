@@ -34,7 +34,6 @@ func clientExample() {
 	}
 	fmt.Println("ok")
 }
-
 func (b *Book) CalcDiscount(count int) error {
 	// ...
 	b.Price = b.Price * count / 100

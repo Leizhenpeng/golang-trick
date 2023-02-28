@@ -21,8 +21,7 @@ func clientExample2() {
 		Store:  100,
 		Member: 1,
 	}
-	book2.
-		CalcDiscount(99).
+	book2.CalcDiscount(99).
 		JuedeIfStore().
 		IfSale().
 		AddPay().
